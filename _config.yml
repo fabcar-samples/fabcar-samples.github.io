@@ -1,0 +1,50 @@
+remote_theme: pmarsceill/just-the-docs
+
+title: FabCar Samples
+description: FabCar samples for Hyperledger Fabric
+url: "https://fabcar-samples.github.io"
+
+# logo: "/assets/images/just-the-docs.png"
+
+permalink: pretty
+exclude: ["LICENSE", "README.md"]
+
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 2
+  preview_words_before: 3
+  preview_words_after: 3
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+heading_anchors: true
+
+aux_links:
+  "FabCar Samples on GitHub":
+    - "//github.com/fabcar-samples/fabcar-samples.github.io"
+
+aux_links_new_tab: false
+
+nav_sort: case_sensitive
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+gh_edit_link: false
+
+color_scheme: nil
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
