@@ -124,7 +124,7 @@ peer lifecycle chaincode commit -o orderer-api.127-0-0-1.nip.io:8080 --channelID
 
 ## Run a transaction!
 
-Create the usual cars....
+Create the usual cars...
 
 ```bash
 peer chaincode invoke -o orderer-api.127-0-0-1.nip.io:8080 --channelID mychannel -n fabcar -c '{"function":"initLedger","Args":[]}'
