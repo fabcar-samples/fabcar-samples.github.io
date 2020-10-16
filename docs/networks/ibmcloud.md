@@ -132,3 +132,11 @@ To close the node.js client...
 ```
 quit
 ```
+
+## Clean up
+
+Finally, there is also an ansible playbook to delete the Fabric network.
+
+```bash
+ansible-playbook fabcar-network-ibmcloud/ansible/delete-fabcar-network.yml
+```
