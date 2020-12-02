@@ -18,6 +18,7 @@ You will need an IBP instance! **TBC**
 This Ansible collection enables you to automate the building of Hyperledger Fabric networks. 
 
 Follow the [installation guide](https://ibm-blockchain.github.io/ansible-collection/installation.html) to get started.
+There are examples using the Docker image below if you do not want to, or can not, install all of the required software.
 
 In your working directory, clone the ansible playbooks for building a fabcar network.
 
@@ -57,6 +58,12 @@ Then issue this ansible command to run the playbook to create a sample network.
 ansible-playbook fabcar-network-ibmcloud/ansible/create-fabcar-network.yml
 ```
 
+Alternatively, using the ibp-ansible docker image:
+
+```
+docker run --rm -u $(id -u) -v "$(pwd)/fabcar-network-ibmcloud/ansible":/playbooks ibmcom/ibp-ansible ansible-playbook /playbooks/create-fabcar-network.yml
+```
+
 ### Get the Fabric Network configuration
 
 When applications run they need a local identity in a wallet. In this case there's a helpful script that can pull out all the information needed. 
@@ -81,10 +88,16 @@ tar -czf "fabcar.tgz" --exclude=".git*" --transform s/fabcar-chaincode-go/src/ f
 
 ### Install and Instantiate Chaincode
 
-Issue this ansible command to run the playbook to install and instantiate the fabcar chaincode.
+Issue this ansible command to run the playbook to install and instantiate the fabcar chaincode:
 
 ```bash
 ansible-playbook fabcar-network-ibmcloud/ansible/deploy-fabcar-contract.yml
+```
+
+Alternatively, using the ibp-ansible docker image:
+
+```
+docker run --rm -u $(id -u) -v "$(pwd)/fabcar-network-ibmcloud/ansible":/playbooks ibmcom/ibp-ansible ansible-playbook /playbooks/deploy-fabcar-contract.yml
 ```
 
 ## Run a transaction!
