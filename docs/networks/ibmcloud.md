@@ -153,3 +153,9 @@ Finally, there is also an ansible playbook to delete the Fabric network.
 ```bash
 ansible-playbook fabcar-network-ibmcloud/ansible/delete-fabcar-network.yml
 ```
+
+Alternatively, using the ibp-ansible docker image:
+
+```
+docker run --rm -u $(id -u) -v "$(pwd)/fabcar-network-ibmcloud/ansible":/playbooks ibmcom/ibp-ansible ansible-playbook /playbooks/delete-fabcar-network.yml
+```
